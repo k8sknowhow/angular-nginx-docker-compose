@@ -1,0 +1,23 @@
+# Starts and creates all containers/services/images/volumes
+# docker-compose up -d
+#
+# Bring everything down, removing the containers entirely and also removing the data volume 
+# docker-compose down --volumes
+#
+# Stop all running containers
+# docker stop $(docker ps -a -q)
+#
+# Remove all containers
+# docker rm $(docker ps -a -q)
+#
+# Remove images
+# docker rmi $(docker images -q)
+# 
+version: '3'
+services:
+  angular-nginx:
+    build: ./angular-nginx
+    image: angular-nginx
+    container_name: angular-nginx
+    ports:
+        - "8080:80"
