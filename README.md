@@ -27,4 +27,7 @@ angular nginx docker-compose
 
     ng new angular-nginx --service-worker --routing --style scss
 
-    
+## Starts and creates all containers/services/images/volumes
+
+    docker-compose up -d
+
